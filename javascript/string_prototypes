@@ -1,0 +1,204 @@
+//                                   ALL PROTOTYPES
+
+    // anchor() (AB ISKA USE NAHI HOTA H)
+let text = "Go to Top";
+let result = text.anchor("top");
+console.log(result);
+
+
+    //  at()
+        /* JavaScript me at() method ek modern and useful method hai jo string ya array me se kisi specific index par element nikalne ke kaam aata hai. */
+
+let name = "Harendra";
+
+console.log(name.at(0));   // "H"  (first letter)
+console.log(name.at(3));   // "e"
+console.log(name.at(-1));  // "a"  (last letter)
+
+        // big()
+
+        /*  JavaScript me big() method ek HTML formatting method hai jo string ko <big> tag ke andar daal deta hai — matlab text thoda bada (large font) me dikhata hai.
+
+⚠️ Note: big() deprecated (purana) method hai, aaj ke modern HTML/CSS me iska use nahi karte, lekin samajhna important hai.
+*/
+
+ let text1 = "Important";
+ document.write(text1.bold().big().fontcolor("red"));
+
+        //  chatAt()
+/*JavaScript me charAt() ek string method hai jo kisi string ke specific index (position) par maujood character (letter) ko return karta hai. */
+
+let str = "JavaScript";
+let lastChar = str.charAt(str.length - 1);
+console.log(lastChar); // 
+
+
+
+
+    // charCodeAt()
+// ye bhi string ke liye hi hota hai, lekin ye character ke Unicode value (ASCII code) ko return karta hai.
+
+
+
+let word = "abc";
+console.log(word.charCodeAt(0));  // 97
+console.log(word.charCodeAt(1));  // 98
+console.log(word.charCodeAt(2));  // 99
+
+
+    // codePointAt()
+/* JavaScript me codePointAt() method charCodeAt() ka modern & advanced version hai — ye Unicode ke extended characters (emoji, special symbols, etc.) ke code points ko correctly handle karta hai. */
+
+let emoji = "😊";
+
+console.log(emoji.charCodeAt(0));   // 55357 ❌ (half code, incorrect)
+console.log(emoji.codePointAt(0));  // 128522 ✅ (correct full Unicode)
+
+
+let text = "A😊B";
+
+for (let i = 0; i < text.length; i++) {
+  console.log(text[i] + " = " + text.codePointAt(i));
+}
+
+
+		//concat() 
+/* JavaScript me concat() method ka use do ya zyada strings ko jodne (combine karne) ke liye hota hai.
+Ye method original string ko change nahi karta, balki nayi combined string return karta hai */
+
+
+let str1 = "Hello";
+let str2 = "World";
+
+let result = str1.concat(" ", str2);
+console.log(result);
+
+		// endsWith()
+/*JavaScript me endsWith() method ka use check karne ke liye hota hai ki koi string kisi specific substring par end ho rahi hai ya nahi.
+
+Ye method true/false return karta hai. */
+
+let file = "report.pdf";
+
+if (file.endsWith(".pdf")) {
+  console.log("This is a PDF file.");
+} else {
+  console.log("Not a PDF file.");
+}
+
+
+    // includes()
+/* JavaScript me includes() method ka use check karne ke liye hota hai ki ek string (ya array) me koi specific substring (ya element) exist karta hai ya nahi.
+
+Ye method true/false return karta hai.*/
+
+let file = "report.pdf";
+
+if (file.includes(".pdf")) {
+  console.log("This is a PDF file.");
+} else {
+  console.log("Not a PDF file.");
+}
+
+
+        //indexOf()
+/* JavaScript me indexOf() method ka use kisi substring (ya element) ki position find karne ke liye hota hai.
+
+Ye method index number return karta hai agar substring/match milta hai, aur agar match nahi milta → -1 return karta hai. */
+
+let text = "Harendra Godara";
+
+if (text.indexOf("Godara") !== -1) {
+  console.log("Substring found!");
+} else {
+  console.log("Substring not found!");
+}
+
+        // isWellFormed()
+/* Ye JavaScript me string method hai jo check karta hai ki string valid Unicode sequence me hai ya nahi.
+
+Ye method mainly ES2021 (ECMAScript 2021) me introduce hua tha aur Unicode characters (especially surrogate pairs / emoji) ke sath kaam aata hai.
+
+Ye true or false return krta hai.
+
+true → agar string valid UTF-16 sequence me hai
+
+false → agar string me invalid Unicode (unpaired surrogates) hai
+
+*/
+let emoji = "😊";
+console.log(emoji.isWellFormed());  // true
+
+let invalidStr = "\uD800";  // high surrogate without low surrogate
+console.log(invalidStr.isWellFormed()); // false
+
+// Explanation:
+// UTF-16 me high surrogate (\uD800–\uDBFF) ke sath low surrogate (\uDC00–\uDFFF) hona chahiye. Agar missing ho → invalid.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

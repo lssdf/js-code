@@ -1,0 +1,16 @@
+h1{
+    color: blue;
+}
+.main{
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    color: white;
+    background-color: rgb(228, 35, 35);
+    height: 50px;
+    width: 100px;
+    font-size: large;
+}
